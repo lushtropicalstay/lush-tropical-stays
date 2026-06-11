@@ -1,18 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lush Tropical Stays</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lush Tropical Apartment | Jamaica</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#faf8f3;
+color:#1f1f1f;
+line-height:1.6;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+nav{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:30px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:700;
+color:white;
+letter-spacing:2px;
+}
+
+.logo span{
+display:block;
+font-size:0.9rem;
+letter-spacing:4px;
+font-family:'Inter',sans-serif;
+font-weight:300;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-size:0.95rem;
+}
+
+.book-btn{
+border:1px solid #d8bc74;
+padding:14px 26px;
+color:#d8bc74;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('hero.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:700px;
+padding-left:80px;
+color:white;
+}
+
+.tag{
+color:#d8bc74;
+letter-spacing:3px;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+line-height:1;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:600px;
+margin-bottom:40px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.primary-btn{
+background:#d8bc74;
+color:white;
+padding:18px 35px;
+text-decoration:none;
+}
+
+.secondary-btn{
+border:1px solid white;
+color:white;
+padding:18px 35px;
+text-decoration:none;
+}
+
+.features{
+max-width:1200px;
+margin:-80px auto 100px;
+background:white;
+border-radius:18px;
+box-shadow:0 15px 40px rgba(0,0,0,.1);
+display:grid;
+grid-template-columns:repeat(3,1fr);
+padding:40px;
+position:relative;
+z-index:20;
+}
+
+.feature{
+text-align:center;
+padding:20px;
+}
+
+.feature h3{
+margin-bottom:10px;
+font-size:1rem;
+}
+
+.about{
+max-width:1200px;
+margin:auto;
+padding:60px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about h2{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+line-height:1;
+margin-bottom:20px;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.amenities{
+background:#0d3d34;
+color:white;
+padding:100px 40px;
+}
+
+.amenities h2{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-size:3.5rem;
+margin-bottom:60px;
+}
+
+.amenity-grid{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:30px;
+border-radius:16px;
+}
+
+.contact{
+padding:100px 40px;
+text-align:center;
+}
+
+.contact h2{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+margin-bottom:20px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:900px){
+
+nav{
+padding:20px;
+}
+
+.menu{
+display:none;
+}
+
+.hero-content{
+padding:30px;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.features{
+grid-template-columns:1fr;
+margin:30px;
+}
+
+.about{
+grid-template-columns:1fr;
+padding:30px;
+}
+
+}
+
+</style>
 </head>
 
-<body style="font-family: Arial; text-align: center; padding: 50px;">
+<body>
 
-  <h1>🌴 Lush Tropical Stays</h1>
+<nav>
 
-  <p>Welcome to your tropical getaway in Jamaica.</p>
+<div class="logo">
+LUSH
+<span>TROPICAL APARTMENT</span>
+</div>
 
-  <p>Website is live 🚀</p>
+<div class="menu">
+<a href="#about">About</a>
+<a href="#amenities">Amenities</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a href="https://www.airbnb.com" class="book-btn">
+BOOK YOUR STAY
+</a>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="tag">
+LUXURY • COMFORT • PARADISE
+</div>
+
+<h1>Your Tropical Escape In Jamaica</h1>
+
+<p>
+Experience elevated island living at Lush Tropical Apartment.
+A stylish retreat designed for comfort, relaxation and unforgettable Caribbean memories.
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://www.airbnb.com" class="primary-btn">
+BOOK NOW
+</a>
+
+<a href="#about" class="secondary-btn">
+LEARN MORE
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h3>Beachfront Location</h3>
+<p>Steps away from Jamaica's beautiful coastline.</p>
+</div>
+
+<div class="feature">
+<h3>Private & Secure</h3>
+<p>Comfortable accommodation with privacy and peace of mind.</p>
+</div>
+
+<div class="feature">
+<h3>Premium Comfort</h3>
+<p>Designed to provide a memorable tropical experience.</p>
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<div>
+
+<h2>A Boutique Escape Like No Other</h2>
+
+<p>
+Lush Tropical Apartment offers a perfect blend of luxury,
+privacy and authentic island charm. Whether you're visiting
+for relaxation or adventure, you'll enjoy a comfortable stay
+in one of Jamaica's most beautiful settings.
+</p>
+
+</div>
+
+<div>
+<img src="hero.jpg">
+</div>
+
+</section>
+
+<section class="amenities" id="amenities">
+
+<h2>Amenities</h2>
+
+<div class="amenity-grid">
+
+<div class="card">Free High-Speed Wi-Fi</div>
+<div class="card">Air Conditioning</div>
+<div class="card">Fully Equipped Kitchen</div>
+<div class="card">Smart TV</div>
+<div class="card">Free Parking</div>
+<div class="card">Self Check-In</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Book Your Stay</h2>
+
+<p>
+Ready for your Jamaican getaway?
+</p>
+
+<br>
+
+<a href="https://www.airbnb.com" class="primary-btn">
+View Availability
+</a>
+
+</section>
+
+<footer>
+© 2026 Lush Tropical Apartment
+</footer>
 
 </body>
 </html>
