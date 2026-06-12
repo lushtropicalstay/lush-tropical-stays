@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Direct | Lush Tropical Apartment</title>
+<meta name="description" content="Book direct at Lush Tropical Apartment located in a 4-star resort in Runaway Bay, St. Ann, Jamaica.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0b3d2e;
+  --green2:#0f513f;
+  --gold:#c7a45b;
+  --cream:#fbf8ef;
+  --ink:#1f2723;
+  --muted:#6a746f;
+  --line:#e9e1cf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter, sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+a{text-decoration:none}
+.header{
+  position:sticky;top:0;z-index:30;background:rgba(251,248,239,.96);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(10px)
+}
+.nav{max-width:1180px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-family:"Cormorant Garamond",serif;font-weight:700;color:var(--green);font-size:28px;line-height:1}
+.brand small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:1.5px;margin-top:3px}
+.navlinks{display:flex;gap:22px;align-items:center;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.navlinks a{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:13px 18px;font-weight:700;border:1px solid transparent;cursor:pointer}
+.btn-green{background:var(--green);color:white}
+.btn-outline{border-color:var(--gold);color:var(--green);background:transparent}
+.hero{
+  min-height:330px;background:
+  linear-gradient(90deg,rgba(5,28,22,.82),rgba(5,28,22,.25)),
+  url('hero.jpg');
+  background-size:cover;background-position:center;
+  display:flex;align-items:center;color:white
+}
+.hero-inner{max-width:1180px;margin:auto;padding:60px 22px;width:100%}
+.kicker{color:#ead79d;text-transform:uppercase;letter-spacing:.18em;font-size:13px;font-weight:700;margin-bottom:10px}
+h1{font-family:"Cormorant Garamond",serif;font-size:58px;line-height:.95;margin-bottom:16px}
+.hero p{font-size:18px;max-width:620px;color:#f8f2df}
+.wrap{max-width:1180px;margin:auto;padding:42px 22px}
+.grid{display:grid;grid-template-columns:1.5fr .9fr;gap:28px;align-items:start}
+.panel{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px rgba(43,31,12,.07);overflow:hidden}
+.panel-pad{padding:28px}
+h2{font-family:"Cormorant Garamond",serif;color:var(--green);font-size:34px;line-height:1.05;margin-bottom:16px}
+h3{font-family:"Cormorant Garamond",serif;color:var(--green);font-size:25px;margin-bottom:10px}
+.calendar-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
+.cal-title{font-weight:800;font-size:20px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.day,.date{min-height:48px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px}
+.day{background:#fbfaf6;font-weight:800;color:var(--green);min-height:36px}
+.date:nth-child(7n),.day:nth-child(7n){border-right:none}
+.date.muted{color:#b8b1a4;background:#fbfaf6}
+.date.booked{background:#eee9df;color:#9d9485;text-decoration:line-through}
+.date.selected{background:#dcecdf;color:var(--green);font-weight:800;position:relative}
+.date.selected::after{content:attr(data-label);position:absolute;font-size:10px;bottom:4px}
+.legend{display:flex;gap:16px;margin-top:14px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:18px;height:18px;border-radius:5px;display:inline-block;background:#dcecdf;border:1px solid #b5d4ba}
+.dot.booked{background:#eee9df;border-color:#ded6c7}
+.price-row{display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding:11px 0}
+.price-row.total{font-size:22px;font-weight:900;color:var(--green);border-bottom:none;margin-top:8px}
+.input-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:13px;font-weight:800;color:var(--green);margin-bottom:6px}
+input,select,textarea{
+  width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fffdf8
+}
+textarea{min-height:110px;resize:vertical}
+.note{font-size:13px;color:var(--muted);margin-top:8px}
+.paypal-box{border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;background:#fffdf8}
+.paypal-logo{font-size:38px;font-weight:900;color:#003087;letter-spacing:-1px;margin-bottom:8px}
+.paypal-logo span{color:#009cde}
+.paypal-btn{display:block;background:#ffc439;color:#10233f;border-radius:9px;padding:14px 18px;font-weight:900;margin:14px 0}
+.card-btn{display:block;border:1px solid #2672ec;color:#174ea6;border-radius:9px;padding:13px 18px;font-weight:800}
+.sync{display:grid;grid-template-columns:80px 1fr;gap:18px;align-items:center}
+.sync-icon{font-size:48px;color:var(--green);text-align:center}
+.platforms{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0}
+.platform{font-weight:900;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:#fffdf8}
+.airbnb{color:#ff385c}.booking{color:#006ce4}.vrbo{color:#243c7c}
+.status{display:inline-block;background:#dff4e5;color:var(--green);border-radius:999px;padding:6px 12px;font-weight:800;font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.mini{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}
+.mini .icon{font-size:32px;margin-bottom:8px}
+.platform-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.platform-card{border:1px solid var(--line);border-radius:14px;padding:17px;text-align:center;background:#fff}
+.platform-card strong{display:block;margin-bottom:8px}
+.warning{
+  background:#fff7df;border-left:5px solid var(--gold);padding:16px;border-radius:10px;margin:18px 0;color:#4b3a16;font-size:14px
+}
+@media(max-width:900px){
+  .nav{align-items:flex-start}.navlinks{display:none}
+  h1{font-size:42px}.grid{grid-template-columns:1fr}.cards,.platform-cards{grid-template-columns:1fr}
+  .input-grid{grid-template-columns:1fr}.sync{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <a class="brand" href="index.html">LUSH<small>TROPICAL APARTMENT<br>(Located in a 4-star resort)</small></a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-green" href="#contact">Request Booking</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Book Direct</div>
+    <h1>Book Your Stay</h1>
+    <p>Choose your dates, review the estimated price, then send a booking request or pay securely with PayPal after availability is confirmed.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="warning">
+    <strong>Important:</strong> This page is designed for direct booking requests. To prevent double bookings, confirm availability before accepting payment. iCal calendar sync can help, but it is not instant.
+  </div>
+
+  <div class="grid">
+    <section class="panel" id="calendar">
+      <div class="panel-pad">
+        <h2>1. Choose Your Dates</h2>
+        <div class="calendar-top">
+          <button class="btn btn-outline" type="button">‹</button>
+          <div class="cal-title">June 2026</div>
+          <button class="btn btn-outline" type="button">›</button>
+        </div>
+
+        <div class="cal-grid">
+          <div class="day">Sun</div><div class="day">Mon</div><div class="day">Tue</div><div class="day">Wed</div><div class="day">Thu</div><div class="day">Fri</div><div class="day">Sat</div>
+          <div class="date muted">31</div><div class="date">1</div><div class="date">2</div><div class="date">3</div><div class="date">4</div><div class="date booked">5</div><div class="date booked">6</div>
+          <div class="date">7</div><div class="date">8</div><div class="date">9</div><div class="date">10</div><div class="date">11</div><div class="date">12</div><div class="date">13</div>
+          <div class="date">14</div><div class="date">15</div><div class="date">16</div><div class="date selected" data-label="check-in">17</div><div class="date">18</div><div class="date">19</div><div class="date">20</div>
+          <div class="date">21</div><div class="date selected" data-label="check-out">22</div><div class="date">23</div><div class="date">24</div><div class="date booked">25</div><div class="date booked">26</div><div class="date">27</div>
+          <div class="date">28</div><div class="date">29</div><div class="date">30</div><div class="date muted">1</div><div class="date muted">2</div><div class="date muted">3</div><div class="date muted">4</div>
+        </div>
+
+        <div class="legend">
+          <span><i class="dot"></i>Selected</span>
+          <span><i class="dot booked"></i>Booked / unavailable</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <div class="panel-pad">
+        <h2>2. Review Price</h2>
+        <div class="price-row"><span>Nightly rate</span><strong id="nightlyDisplay">USD $150</strong></div>
+        <div class="price-row"><span>Number of nights</span><strong id="nightsDisplay">5</strong></div>
+        <div class="price-row"><span>Cleaning fee</span><strong id="cleaningDisplay">USD $60</strong></div>
+        <div class="price-row total"><span>Total estimate</span><span id="totalDisplay">USD $810</span></div>
+
+        <div style="height:18px"></div>
+
+        <h2>3. Pay Securely</h2>
+        <div class="paypal-box">
+          <div class="paypal-logo">Pay<span>Pal</span></div>
+          <p class="note">Guests can pay by PayPal or debit/credit card after availability is confirmed.</p>
+          <a class="paypal-btn" href="https://www.paypal.com/paypalme/" target="_blank" rel="noopener">Pay with PayPal</a>
+          <a class="card-btn" href="https://www.paypal.com/paypalme/" target="_blank" rel="noopener">Pay with Debit or Credit Card</a>
+          <p class="note">Replace this with your real PayPal.Me link or PayPal payment button.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="panel" style="margin-top:28px">
+    <div class="panel-pad sync">
+      <div class="sync-icon">📅</div>
+      <div>
+        <h2>iCal Calendar Sync</h2>
+        <p>Availability can be kept in sync with Airbnb, Booking.com and Vrbo using iCal calendar links. This helps reduce double bookings, but iCal updates are not instant.</p>
+        <div class="platforms">
+          <span class="platform airbnb">Airbnb</span>
+          <span class="platform booking">Booking.com</span>
+          <span class="platform vrbo">Vrbo</span>
+          <span class="status">SYNC READY</span>
+        </div>
+        <p class="note">You will paste your iCal export links into your booking system or calendar manager later. GitHub Pages alone cannot automatically import iCal feeds without an external service.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="contact" style="margin-top:28px">
+    <div class="panel-pad">
+      <h2>Request a Direct Booking</h2>
+      <p>Send your dates and guest details. Availability will be confirmed before payment is accepted.</p>
+      <form action="https://formsubmit.co/lushtropicalapartment@gmail.com" method="POST" style="margin-top:20px">
+        <input type="hidden" name="_subject" value="New direct booking request - Lush Tropical Apartment">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="input-grid">
+          <div><label>Your Name</label><input name="name" required></div>
+          <div><label>Email</label><input type="email" name="email" required></div>
+          <div><label>Phone / WhatsApp</label><input name="phone"></div>
+          <div><label>Number of Guests</label><input type="number" name="guests" min="1" max="3"></div>
+          <div><label>Check-in Date</label><input type="date" name="check_in"></div>
+          <div><label>Check-out Date</label><input type="date" name="check_out"></div>
+          <div><label>Nightly Rate You Want to Use</label><input name="nightly_rate" placeholder="Example: USD $150"></div>
+          <div><label>Preferred Platform</label>
+            <select name="preferred_platform">
+              <option>Book Direct</option>
+              <option>Airbnb</option>
+              <option>Booking.com</option>
+              <option>Vrbo</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:14px">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell us your preferred dates or any special requests."></textarea>
+        </div>
+        <div style="margin-top:18px">
+          <button class="btn btn-green" type="submit">Send Booking Request</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="platform-cards">
+    <a class="platform-card" href="https://www.airbnb.com/rooms/662546660079384042" target="_blank" rel="noopener"><strong class="airbnb">Airbnb</strong>View listing</a>
+    <a class="platform-card" href="https://www.booking.com/hotel/jm/lush-tropical-apartment-located-in-a-4-star-resort" target="_blank" rel="noopener"><strong class="booking">Booking.com</strong>View listing</a>
+    <a class="platform-card" href="https://www.vrbo.com/3033255?unitId=3605299" target="_blank" rel="noopener"><strong class="vrbo">Vrbo</strong>View listing</a>
+  </section>
+
+  <section class="cards">
+    <div class="mini"><div class="icon">🔒</div><h3>Secure Payment</h3><p>PayPal handles the payment securely. Do not send card details by email or message.</p></div>
+    <div class="mini"><div class="icon">📩</div><h3>Manual Confirmation</h3><p>Availability is confirmed before payment to avoid double bookings.</p></div>
+    <div class="mini"><div class="icon">🌴</div><h3>Best Direct Rate</h3><p>Book direct for simple communication and a smooth stay experience.</p></div>
+  </section>
+</main>
+
+<script>
+const nightly = 150;
+const nights = 5;
+const cleaning = 60;
+document.getElementById("nightlyDisplay").textContent = "USD $" + nightly;
+document.getElementById("nightsDisplay").textContent = nights;
+document.getElementById("cleaningDisplay").textContent = "USD $" + cleaning;
+document.getElementById("totalDisplay").textContent = "USD $" + ((nightly*nights)+cleaning);
+</script>
+
+</body>
+</html>
