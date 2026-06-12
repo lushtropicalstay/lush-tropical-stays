@@ -1,385 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Lush Tropical Apartment | Jamaica</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Inter',sans-serif;
-background:#faf8f3;
-color:#1f1f1f;
-line-height:1.6;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-nav{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-padding:30px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:100;
-}
-
-.logo{
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-font-weight:700;
-color:white;
-letter-spacing:2px;
-}
-
-.logo span{
-display:block;
-font-size:0.9rem;
-letter-spacing:4px;
-font-family:'Inter',sans-serif;
-font-weight:300;
-}
-
-.menu{
-display:flex;
-gap:30px;
-}
-
-.menu a{
-color:white;
-text-decoration:none;
-font-size:0.95rem;
-}
-
-.book-btn{
-border:1px solid #d8bc74;
-padding:14px 26px;
-color:#d8bc74;
-text-decoration:none;
-}
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('hero.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-}
-
-.hero-content{
-max-width:700px;
-padding-left:80px;
-color:white;
-}
-
-.tag{
-color:#d8bc74;
-letter-spacing:3px;
-margin-bottom:15px;
-}
-
-.hero h1{
-font-family:'Cormorant Garamond',serif;
-font-size:5rem;
-line-height:1;
-margin-bottom:25px;
-}
-
-.hero p{
-font-size:1.2rem;
-max-width:600px;
-margin-bottom:40px;
-}
-
-.hero-buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.primary-btn{
-background:#d8bc74;
-color:white;
-padding:18px 35px;
-text-decoration:none;
-}
-
-.secondary-btn{
-border:1px solid white;
-color:white;
-padding:18px 35px;
-text-decoration:none;
-}
-
-.features{
-max-width:1200px;
-margin:-80px auto 100px;
-background:white;
-border-radius:18px;
-box-shadow:0 15px 40px rgba(0,0,0,.1);
-display:grid;
-grid-template-columns:repeat(3,1fr);
-padding:40px;
-position:relative;
-z-index:20;
-}
-
-.feature{
-text-align:center;
-padding:20px;
-}
-
-.feature h3{
-margin-bottom:10px;
-font-size:1rem;
-}
-
-.about{
-max-width:1200px;
-margin:auto;
-padding:60px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.about h2{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-line-height:1;
-margin-bottom:20px;
-}
-
-.about img{
-width:100%;
-border-radius:20px;
-}
-
-.amenities{
-background:#0d3d34;
-color:white;
-padding:100px 40px;
-}
-
-.amenities h2{
-text-align:center;
-font-family:'Cormorant Garamond',serif;
-font-size:3.5rem;
-margin-bottom:60px;
-}
-
-.amenity-grid{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:rgba(255,255,255,.08);
-padding:30px;
-border-radius:16px;
-}
-
-.contact{
-padding:100px 40px;
-text-align:center;
-}
-
-.contact h2{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-margin-bottom:20px;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-@media(max-width:900px){
-
-nav{
-padding:20px;
-}
-
-.menu{
-display:none;
-}
-
-.hero-content{
-padding:30px;
-}
-
-.hero h1{
-font-size:3rem;
-}
-
-.features{
-grid-template-columns:1fr;
-margin:30px;
-}
-
-.about{
-grid-template-columns:1fr;
-padding:30px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lush Tropical Apartment | Runaway Bay, Jamaica</title>
+  <meta name="description" content="Lush Tropical Apartment located in a 4-star resort in Runaway Bay, St. Ann, Jamaica." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">LUSH<small>TROPICAL APARTMENT</small><span class="subline">Located in a 4-star resort</span></a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#amenities">Amenities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#book">Book</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="outline-btn" href="#book">Book Your Stay</a>
+    </div>
+  </nav>
 
-<nav>
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="eyebrow">Comfort • Paradise • Family Friendly</div>
+      <h1>Your Tropical Escape <br>in Jamaica <span>Located in a 4-star resort</span></h1>
+      <p>A relaxing Caribbean seaside apartment in Runaway Bay, St. Ann — steps from beach access, resort amenities, and warm island charm.</p>
+      <div class="cta-row">
+        <a class="btn" href="#book">Book Your Stay</a>
+        <a class="btn secondary" href="gallery.html">View Photo Gallery</a>
+      </div>
+    </div>
+  </header>
 
-<div class="logo">
-LUSH
-<span>TROPICAL APARTMENT</span>
-</div>
+  <section class="feature-strip">
+    <div class="container features">
+      <div class="feature"><div class="icon">🏖️</div><h3>Beachfront Setting</h3><p>Not even a minute walk from your doorstep to two beaches on the property.</p></div>
+      <div class="feature"><div class="icon">🛎️</div><h3>Front Desk Check-In</h3><p>Arrive through the resort front desk for a smooth start to your stay.</p></div>
+      <div class="feature"><div class="icon">🌿</div><h3>Comfort</h3><p>A family-friendly, tropical apartment with easy access to resort-style amenities.</p></div>
+    </div>
+  </section>
 
-<div class="menu">
-<a href="#about">About</a>
-<a href="#amenities">Amenities</a>
-<a href="#contact">Contact</a>
-</div>
+  <section class="section" id="about">
+    <div class="container split">
+      <div>
+        <div class="section-label">About Lush Tropical Apartment</div>
+        <h2>A traditional Caribbean seaside vacation experience.</h2>
+        <p>We offer a traditional Caribbean seaside vacation experience. Tropical, relaxing, family friendly 1-bedroom apartment located in a 4-star resort with a myriad of fun and unique amenities at your disposal.</p>
+        <p style="margin-top:18px">Not even a minute walk from your doorstep to 2 beaches on the property. Access to a large pool, hammocks, tennis court, basketball court, to name a few. There is also nanny service available for children and babies. Centrally located in Runaway Bay, St. Ann — Jamaica's garden parish.</p>
+        <div class="stats">
+          <div class="stat"><b>1</b>Bedroom</div>
+          <div class="stat"><b>2</b>Beds</div>
+          <div class="stat"><b>3</b>Sleeps</div>
+          <div class="stat"><b>1</b>Bathroom</div>
+        </div>
+      </div>
+      <div class="photo-card"><img src="assets/pool-resort.jpg" alt="Pool and resort grounds at Lush Tropical Apartment"></div>
+    </div>
+  </section>
 
-<a href="https://www.airbnb.com" class="book-btn">
-BOOK YOUR STAY
-</a>
+  <section class="section" style="padding-top:20px">
+    <div class="container">
+      <div class="section-label">Apartment Highlights</div>
+      <h2>Bedroom & living room comfort.</h2>
+      <div class="mini-gallery">
+        <img src="assets/bedroom-king.jpg" alt="Bedroom with king bed">
+        <img src="assets/living-room-sofa-bed.jpg" alt="Living room with sofa bed">
+      </div>
+    </div>
+  </section>
 
-</nav>
+  <section class="section dark-section" id="amenities">
+    <div class="container">
+      <div class="section-label">Amenities</div>
+      <h2>Everything you need for a relaxing stay.</h2>
+      <div class="amenity-grid">
+        <div class="amenity"><h3>Free Wi-Fi</h3><p>Stay connected during your visit.</p></div>
+        <div class="amenity"><h3>Air Conditioning</h3><p>Cool, comfortable indoor living.</p></div>
+        <div class="amenity"><h3>Fully Equipped Kitchen</h3><p>Prepare meals when you prefer to dine in.</p></div>
+        <div class="amenity"><h3>Front Desk Check-In</h3><p>Convenient arrival through the resort front desk.</p></div>
+        <div class="amenity"><h3>Pool & Beach Access</h3><p>Enjoy the resort pool and nearby beaches.</p></div>
+        <div class="amenity"><h3>Family Friendly</h3><p>Nanny services are available through the resort.</p></div>
+      </div>
+    </div>
+  </section>
 
-<section class="hero">
+  <section class="section" id="book">
+    <div class="container">
+      <div class="section-label">Book Your Stay</div>
+      <h2>Reserve through your preferred platform.</h2>
+      <div class="booking">
+        <p>Choose Airbnb, Booking.com, or VRBO to check availability and complete your booking.</p>
+        <div class="booking-grid">
+          <a class="booking-card" href="https://www.airbnb.com/rooms/662546660079384042" target="_blank" rel="noopener"><div class="logo-text airbnb">Airbnb</div><span>View listing</span></a>
+          <a class="booking-card" href="https://www.booking.com/hotel/jm/lush-tropical-apartment-located-in-a-4-star-resort" target="_blank" rel="noopener"><div class="logo-text bookingcom">Booking.com</div><span>View listing</span></a>
+          <a class="booking-card" href="https://www.vrbo.com/3033255?unitId=3605299" target="_blank" rel="noopener"><div class="logo-text vrbo">Vrbo</div><span>View listing</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="hero-content">
+  <section class="section" id="contact">
+    <div class="container split">
+      <div>
+        <div class="section-label">Contact Us</div>
+        <h2>Questions before booking?</h2>
+        <p>Send a message and we will respond as soon as possible.</p>
+        <form class="contact-form" action="https://formsubmit.co/lushtropicalapartment@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from Lush Tropical Apartment website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <input type="text" name="dates" placeholder="Requested dates / length of stay">
+          <textarea name="message" placeholder="Your message" required></textarea>
+          <button class="btn dark" type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="photo-card"><img src="assets/main-beach.jpg" alt="Beach at the resort"></div>
+    </div>
+  </section>
 
-<div class="tag">
-LUXURY • COMFORT • PARADISE
-</div>
-
-<h1>Your Tropical Escape In Jamaica</h1>
-
-<p>
-Experience elevated island living at Lush Tropical Apartment.
-A stylish retreat designed for comfort, relaxation and unforgettable Caribbean memories.
-</p>
-
-<div class="hero-buttons">
-
-<a href="https://www.airbnb.com" class="primary-btn">
-BOOK NOW
-</a>
-
-<a href="#about" class="secondary-btn">
-LEARN MORE
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="features">
-
-<div class="feature">
-<h3>Beachfront Location</h3>
-<p>Steps away from Jamaica's beautiful coastline.</p>
-</div>
-
-<div class="feature">
-<h3>Private & Secure</h3>
-<p>Comfortable accommodation with privacy and peace of mind.</p>
-</div>
-
-<div class="feature">
-<h3>Premium Comfort</h3>
-<p>Designed to provide a memorable tropical experience.</p>
-</div>
-
-</section>
-
-<section class="about" id="about">
-
-<div>
-
-<h2>A Boutique Escape Like No Other</h2>
-
-<p>
-Lush Tropical Apartment offers a perfect blend of luxury,
-privacy and authentic island charm. Whether you're visiting
-for relaxation or adventure, you'll enjoy a comfortable stay
-in one of Jamaica's most beautiful settings.
-</p>
-
-</div>
-
-<div>
-<img src="hero.jpg">
-</div>
-
-</section>
-
-<section class="amenities" id="amenities">
-
-<h2>Amenities</h2>
-
-<div class="amenity-grid">
-
-<div class="card">Free High-Speed Wi-Fi</div>
-<div class="card">Air Conditioning</div>
-<div class="card">Fully Equipped Kitchen</div>
-<div class="card">Smart TV</div>
-<div class="card">Free Parking</div>
-<div class="card">Self Check-In</div>
-
-</div>
-
-</section>
-
-<section class="contact" id="contact">
-
-<h2>Book Your Stay</h2>
-
-<p>
-Ready for your Jamaican getaway?
-</p>
-
-<br>
-
-<a href="https://www.airbnb.com" class="primary-btn">
-View Availability
-</a>
-
-</section>
-
-<footer>
-© 2026 Lush Tropical Apartment
-</footer>
-
+  <footer class="footer">
+    <strong>Lush Tropical Apartment</strong><br>
+    <small>Runaway Bay, St. Ann, Jamaica • Located in a 4-star resort</small>
+  </footer>
 </body>
 </html>
