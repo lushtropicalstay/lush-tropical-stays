@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Resort Map | Lush Tropical Apartment</title>
+<meta name="description" content="Interactive resort map for Lush Tropical Apartment located in a 4-star resort in Runaway Bay, Jamaica.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#0b3d2e;
+  --green2:#123f33;
+  --gold:#c8a75a;
+  --cream:#fbf8ef;
+  --soft:#fffdf8;
+  --ink:#18231f;
+  --muted:#68756f;
+  --line:#e7dec9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.header{
+  position:sticky;top:0;z-index:100;background:rgba(251,248,239,.96);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(12px)
+}
+.nav{max-width:1220px;margin:auto;padding:17px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:"Cormorant Garamond",serif;color:var(--green);font-size:30px;font-weight:700;line-height:.9}
+.brand small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:1.25px;margin-top:6px;text-transform:uppercase}
+.navlinks{display:flex;gap:20px;font-size:13px;text-transform:uppercase;font-weight:800;letter-spacing:.06em}
+.navlinks a{color:var(--green)}
+.hero{
+  min-height:330px;
+  background:linear-gradient(90deg,rgba(7,35,28,.92),rgba(7,35,28,.42)),
+  url('assets/resort-map.jpg');
+  background-size:cover;background-position:center 40%;
+  color:white;display:flex;align-items:center
+}
+.hero-inner{max-width:1220px;margin:auto;width:100%;padding:70px 22px}
+.kicker{color:#ead79d;letter-spacing:.18em;text-transform:uppercase;font-weight:800;font-size:13px;margin-bottom:12px}
+h1{font-family:"Cormorant Garamond",serif;font-size:58px;line-height:.95;margin-bottom:16px}
+.hero p{font-size:18px;max-width:720px;color:#f8f1df}
+.wrap{max-width:1220px;margin:auto;padding:34px 22px 70px}
+.top-grid{display:grid;grid-template-columns:1fr .95fr;gap:22px;margin-bottom:24px}
+.card{
+  background:white;border:1px solid var(--line);border-radius:22px;padding:26px;
+  box-shadow:0 18px 50px rgba(43,31,12,.07)
+}
+h2{font-family:"Cormorant Garamond",serif;font-size:36px;color:var(--green);line-height:1.05;margin-bottom:12px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.badge{background:#fffaf0;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;font-weight:800;color:var(--green)}
+.map-card{
+  background:white;border:1px solid var(--line);border-radius:26px;padding:18px;
+  box-shadow:0 20px 60px rgba(43,31,12,.10)
+}
+.map-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding:8px 8px 18px}
+.map-head h2{margin-bottom:0}
+.map-head p{color:var(--muted);font-size:14px;max-width:440px}
+.map-frame{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#eee5d2}
+.map-frame img{width:100%;display:block}
+.pin{
+  position:absolute;transform:translate(-50%,-100%);
+  width:38px;height:38px;border-radius:50% 50% 50% 0;rotate:-45deg;
+  background:var(--gold);border:3px solid white;box-shadow:0 9px 24px rgba(0,0,0,.25);
+  cursor:pointer;transition:.2s ease;z-index:5
+}
+.pin span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;rotate:45deg;font-size:17px}
+.pin:hover,.pin.active{scale:1.13;background:#f0cf7a}
+.panel{
+  display:none;position:absolute;right:18px;bottom:18px;width:min(360px,calc(100% - 36px));
+  background:rgba(11,61,46,.97);color:white;border:1px solid rgba(255,255,255,.18);
+  border-radius:18px;padding:20px;box-shadow:0 18px 50px rgba(0,0,0,.28);z-index:10
+}
+.panel.show{display:block}
+.panel h3{font-family:"Cormorant Garamond",serif;font-size:30px;color:#ead79d;margin-bottom:8px}
+.panel p{font-size:14px;color:#fbf3de}
+.panel .close{float:right;background:transparent;color:white;border:0;font-size:24px;cursor:pointer}
+.legend{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.legend button{
+  border:1px solid var(--line);background:#fffdf8;border-radius:16px;padding:15px;text-align:left;cursor:pointer;
+  font-family:Inter,sans-serif;box-shadow:0 10px 25px rgba(43,31,12,.04);transition:.18s ease
+}
+.legend button:hover{transform:translateY(-2px);border-color:var(--gold)}
+.legend b{display:block;color:var(--green);font-size:14px;margin-bottom:4px}
+.legend small{color:var(--muted)}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.info{background:white;border:1px solid var(--line);border-radius:20px;padding:24px}
+.info .icon{font-size:34px;margin-bottom:8px}
+.info h3{font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--green);margin-bottom:7px}
+.note{
+  margin-top:24px;background:#fff6dd;border-left:5px solid var(--gold);padding:18px;border-radius:14px;color:#4b3a16
+}
+footer{background:#111;color:white;text-align:center;padding:28px;margin-top:40px}
+@media(max-width:920px){
+  .navlinks{display:none}
+  h1{font-size:42px}
+  .top-grid,.info-grid{grid-template-columns:1fr}
+  .legend{grid-template-columns:repeat(2,1fr)}
+  .map-head{display:block}
+}
+@media(max-width:620px){
+  .legend{grid-template-columns:1fr}
+  .pin{width:30px;height:30px}
+  .pin span{font-size:14px}
+  .panel{position:fixed;left:16px;right:16px;bottom:16px;width:auto}
+}
+</style>
+</head>
+
+<body>
+<header class="header">
+  <nav class="nav">
+    <a class="brand" href="index.html">LUSH<small>Tropical Apartment<br>Located in a 4-star resort</small></a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="book-direct.html">Book Direct</a>
+      <a href="guest-manual-7x4k9q.html">Guest Guide</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Guest Resort Guide</div>
+    <h1>Interactive Resort Map</h1>
+    <p>Tap the gold markers to locate the apartment, reception, beaches, pool, restaurants, gym, courts, playgrounds and other resort amenities.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="top-grid">
+    <div class="card">
+      <h2>Find Your Way Around</h2>
+      <p>This interactive guide helps guests quickly identify the main areas of the resort. Your apartment is located in <strong>Block 6 near the Reservations Office</strong>.</p>
+      <div class="badges">
+        <span class="badge">🏡 Apartment</span>
+        <span class="badge">🏖 Beaches</span>
+        <span class="badge">🏊 Pool</span>
+        <span class="badge">🛎 Reception</span>
+        <span class="badge">🎾 Courts</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Quick Orientation</h2>
+      <p><strong>Check-in:</strong> Reception / Front Desk</p>
+      <p><strong>Apartment:</strong> Block 6 near Reservations Office</p>
+      <p><strong>Beach access:</strong> Main beach plus eastern access to a longer beach stretch</p>
+      <p><strong>Dining:</strong> Restaurant/bar access requires a day pass or all-inclusive package.</p>
+    </div>
+  </section>
+
+  <section class="map-card">
+    <div class="map-head">
+      <div>
+        <h2>Tap a Marker</h2>
+      </div>
+      <p>Markers are approximate and intended as a guest orientation guide. Use resort signage and front desk guidance when needed.</p>
+    </div>
+
+    <div class="map-frame" id="mapFrame">
+      <img src="assets/resort-map.jpg" alt="Franklyn D Resort and Spa interactive property map">
+
+      <button class="pin" style="left:63%;top:82%" data-title="🏡 Lush Tropical Apartment" data-text="Located in Block 6 near the Reservations Office. This is your main point of reference during your stay. Close to Reception, the main pathways and resort amenities."><span>🏡</span></button>
+
+      <button class="pin" style="left:58%;top:91%" data-title="🛎 Reception / Check-In" data-text="Check in here and receive your wristband. Guests can also ask about all-inclusive packages, day passes and resort information."><span>🛎</span></button>
+
+      <button class="pin" style="left:37%;top:40%" data-title="🏖 Main Beach" data-text="Main beach area on the property. The apartment is a very short walk from beach access."><span>🏖</span></button>
+
+      <button class="pin" style="left:92%;top:28%" data-title="🚪 Eastern Beach Access" data-text="Eastern side access toward a longer stretch of beach. Great for walking and exploring the seaside."><span>🚪</span></button>
+
+      <button class="pin" style="left:66%;top:54%" data-title="🏊 Main Pool" data-text="Large resort pool area with loungers nearby. A central amenity for relaxing during the day."><span>🏊</span></button>
+
+      <button class="pin" style="left:55%;top:31%" data-title="💦 Waterslide & Activity Pool" data-text="The Big Blue waterslide and activity pool area are located near the seafront activity zone."><span>💦</span></button>
+
+      <button class="pin" style="left:67%;top:36%" data-title="🍽 Verandah Restaurant" data-text="Restaurant access is available only with an all-inclusive or day pass package purchased through the front desk."><span>🍽</span></button>
+
+      <button class="pin" style="left:14%;top:48%" data-title="🍴 Pier / Overproof Restaurants" data-text="Oceanfront restaurant areas on the western side of the resort. Access may depend on package or resort rules."><span>🍴</span></button>
+
+      <button class="pin" style="left:64%;top:46%" data-title="💪 Gym / Fitness Centre" data-text="Cardio and fitness centre area near the main bar and piano lounge."><span>💪</span></button>
+
+      <button class="pin" style="left:79%;top:78%" data-title="🎾 Tennis Court" data-text="Tennis court located on the southeast side of the resort."><span>🎾</span></button>
+
+      <button class="pin" style="left:84%;top:66%" data-title="🏀 Basketball Court" data-text="Basketball court located near the playground and tennis court area."><span>🏀</span></button>
+
+      <button class="pin" style="left:86%;top:52%" data-title="🧒 Kiddie Centre / Playgrounds" data-text="Children’s areas including kiddie centre, playgrounds, craft shop and family-friendly spaces."><span>🧒</span></button>
+
+      <button class="pin" style="left:90%;top:16%" data-title="🧖 Spa / Sundeck" data-text="Spa and sundeck area on the northeast side of the resort."><span>🧖</span></button>
+
+      <div class="panel" id="infoPanel">
+        <button class="close" onclick="closePanel()">×</button>
+        <h3 id="panelTitle">Location</h3>
+        <p id="panelText">Details</p>
+      </div>
+    </div>
+
+    <div class="legend">
+      <button data-pin="0"><b>🏡 Apartment</b><small>Block 6 near Reservations Office</small></button>
+      <button data-pin="1"><b>🛎 Reception</b><small>Check-in and wristbands</small></button>
+      <button data-pin="2"><b>🏖 Main Beach</b><small>Primary beach area</small></button>
+      <button data-pin="3"><b>🚪 Eastern Beach</b><small>Long beach access</small></button>
+      <button data-pin="4"><b>🏊 Main Pool</b><small>Pool and loungers</small></button>
+      <button data-pin="5"><b>💦 Waterslide</b><small>Activity pool area</small></button>
+      <button data-pin="6"><b>🍽 Restaurant</b><small>Pass required</small></button>
+      <button data-pin="8"><b>💪 Fitness Centre</b><small>Gym area</small></button>
+      <button data-pin="9"><b>🎾 Tennis</b><small>Court area</small></button>
+      <button data-pin="10"><b>🏀 Basketball</b><small>Court area</small></button>
+      <button data-pin="11"><b>🧒 Kiddie Centre</b><small>Family amenities</small></button>
+      <button data-pin="12"><b>🧖 Spa</b><small>Spa / sundeck</small></button>
+    </div>
+  </section>
+
+  <section class="info-grid">
+    <div class="info"><div class="icon">🏖</div><h3>Beach Access</h3><p>The property has a main beach, and guests can also access a gate on the eastern part of the property leading to a longer stretch of beach.</p></div>
+    <div class="info"><div class="icon">🛎</div><h3>Check-In</h3><p>Guests check in at the front desk and receive a wristband. Please keep your wristband during your stay.</p></div>
+    <div class="info"><div class="icon">🍽</div><h3>Restaurant & Bar</h3><p>The apartment and resort are separate entities. Restaurant and bar access requires an all-inclusive or day pass package.</p></div>
+  </section>
+
+  <div class="note">
+    <strong>Guest tip:</strong> For the most accurate directions, use this map as a visual guide and confirm specific access points or package rules with the front desk.
+  </div>
+</main>
+
+<footer>© 2026 Lush Tropical Apartment</footer>
+
+<script>
+const pins = Array.from(document.querySelectorAll(".pin"));
+const panel = document.getElementById("infoPanel");
+const title = document.getElementById("panelTitle");
+const text = document.getElementById("panelText");
+
+function openPin(pin){
+  pins.forEach(p=>p.classList.remove("active"));
+  pin.classList.add("active");
+  title.textContent = pin.dataset.title;
+  text.textContent = pin.dataset.text;
+  panel.classList.add("show");
+}
+function closePanel(){
+  panel.classList.remove("show");
+  pins.forEach(p=>p.classList.remove("active"));
+}
+pins.forEach(pin => pin.addEventListener("click", () => openPin(pin)));
+document.querySelectorAll(".legend button").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const pin = pins[parseInt(btn.dataset.pin,10)];
+    if(pin){
+      openPin(pin);
+      document.getElementById("mapFrame").scrollIntoView({behavior:"smooth",block:"center"});
+    }
+  });
+});
+</script>
+</body>
+</html>
