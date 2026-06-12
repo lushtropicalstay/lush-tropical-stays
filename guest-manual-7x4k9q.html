@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Guide | Lush Tropical Apartment</title>
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet" />
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#0b3d33;
+      --green2:#092d27;
+      --gold:#d8bc74;
+      --cream:#fbf8ef;
+      --paper:#fffdf8;
+      --ink:#1f2a27;
+      --muted:#66736f;
+      --shadow:0 22px 60px rgba(0,0,0,.12);
+      --radius:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+    a{color:inherit}
+    .hero{min-height:78vh;background:linear-gradient(90deg,rgba(4,30,25,.82),rgba(4,30,25,.42),rgba(4,30,25,.12)),url('assets/hero.jpg') center/cover;display:flex;align-items:center;padding:36px 7vw;color:white;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;left:-8%;bottom:-80px;width:116%;height:170px;background:var(--cream);border-radius:50% 50% 0 0/55% 55% 0 0}
+    .nav{position:absolute;top:24px;left:7vw;right:7vw;display:flex;justify-content:space-between;align-items:center;z-index:3}
+    .brand{font-family:'Cormorant Garamond',serif;font-size:2rem;letter-spacing:1.5px;font-weight:700;line-height:.9}
+    .brand span{display:block;font:500 .72rem Inter,sans-serif;letter-spacing:4px;color:var(--gold);margin-top:8px}
+    .pill{border:1px solid rgba(216,188,116,.65);padding:12px 18px;border-radius:999px;color:var(--gold);font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;background:rgba(0,0,0,.12);backdrop-filter:blur(8px)}
+    .hero-content{position:relative;z-index:2;max-width:780px;margin-top:40px}
+    .eyebrow{color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-size:.85rem}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,8vw,7rem);line-height:.88;margin-bottom:26px;max-width:850px}
+    .hero p{font-size:1.18rem;max-width:670px;color:rgba(255,255,255,.92)}
+    .quick{position:relative;z-index:5;max-width:1180px;margin:-70px auto 70px;padding:0 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .quick-card{background:rgba(255,253,248,.96);border:1px solid rgba(216,188,116,.25);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+    .quick-card small{display:block;color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:6px}.quick-card strong{font-size:1.05rem}
+    .wrap{max-width:1180px;margin:auto;padding:0 22px 80px}.section{margin:28px 0;background:var(--paper);border-radius:var(--radius);box-shadow:0 12px 36px rgba(0,0,0,.07);overflow:hidden;border:1px solid rgba(216,188,116,.16)}
+    .section-inner{padding:42px}.split{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.split.reverse{grid-template-columns:.95fr 1.05fr}.photo{width:100%;border-radius:18px;box-shadow:0 16px 34px rgba(0,0,0,.12);display:block;max-height:560px;object-fit:cover;background:white}
+    h2{font-family:'Cormorant Garamond',serif;color:var(--green);font-size:clamp(2.4rem,4vw,4rem);line-height:.95;margin-bottom:18px}.gold-line{width:72px;height:2px;background:var(--gold);margin:0 0 22px}.lead{font-size:1.08rem;color:#3a4743}.muted{color:var(--muted)}
+    .grid{display:grid;gap:18px}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+    .info-card{border-radius:18px;padding:24px;background:#fff;border:1px solid rgba(216,188,116,.22);box-shadow:0 8px 22px rgba(0,0,0,.045)}.icon{font-size:1.6rem;margin-bottom:10px}.info-card h3{color:var(--green);margin-bottom:8px;font-size:1.05rem;text-transform:uppercase;letter-spacing:1.2px}.info-card p,.info-card li{color:#3d4845;font-size:.96rem}.list{padding-left:20px}.list li{margin:8px 0}.price{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(216,188,116,.25);padding:15px 0}.price:last-child{border-bottom:0}.amount{font-weight:800;color:var(--green);white-space:nowrap}
+    .dark{background:linear-gradient(135deg,var(--green),var(--green2));color:white}.dark h2,.dark h3{color:white}.dark .gold-line{background:var(--gold)}.dark .info-card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.13)}.dark .info-card p,.dark .info-card li{color:rgba(255,255,255,.86)}
+    .callout{background:#f7f0d8;border-left:5px solid var(--gold);border-radius:14px;padding:22px;margin-top:18px;color:#3c3a2f}.warning{background:#fff3f0;border-left-color:#d26b50}.button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{border:0;background:var(--green);color:white;padding:13px 20px;border-radius:999px;font-weight:700;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px}.btn.gold{background:var(--gold);color:#332b12}.btn.outline{background:transparent;border:1px solid var(--gold);color:var(--green)}
+    .image-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px}.image-strip img{height:300px;object-fit:cover;border-radius:18px;width:100%}.modal{display:none;position:fixed;z-index:9999;inset:0;background:rgba(5,20,17,.88);padding:30px;align-items:center;justify-content:center}.modal.open{display:flex}.modal-card{background:#fffdf8;border-radius:22px;max-width:1100px;width:100%;max-height:92vh;overflow:auto;position:relative;padding:22px;box-shadow:var(--shadow)}.modal-card img{width:100%;height:auto;border-radius:14px;display:block}.close{position:sticky;top:0;float:right;margin-bottom:8px;background:var(--green);color:white;border:0;border-radius:999px;padding:10px 14px;cursor:pointer;font-weight:800}
+    .footer{padding:44px 22px;background:#0b1513;color:white;text-align:center}.footer strong{font-family:'Cormorant Garamond',serif;font-size:2rem;display:block;color:var(--gold)}
+    @media(max-width:900px){.quick,.grid-4{grid-template-columns:1fr 1fr}.split,.split.reverse,.grid-2,.grid-3{grid-template-columns:1fr}.section-inner{padding:28px}.nav{left:22px;right:22px}.pill{display:none}.quick{margin-top:-42px}.image-strip{grid-template-columns:1fr}.image-strip img{height:auto}}
+    @media(max-width:560px){.quick,.grid-4{grid-template-columns:1fr}.hero{min-height:68vh;padding:28px 22px}.brand{font-size:1.55rem}.hero p{font-size:1rem}.section-inner{padding:22px}.price{display:block}.amount{display:block;margin-top:4px}}
+    @media print{.hero,.quick,.button-row,.footer{display:none}.section{box-shadow:none;break-inside:avoid}.wrap{padding:0}.modal{display:none!important}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="nav"><div class="brand">Lush Tropical<span>APARTMENT</span></div><div class="pill">Private Guest Guide</div></div>
+    <div class="hero-content"><div class="eyebrow">Welcome to Jamaica</div><h1>Guest Information Guide</h1><p>Everything you need for a comfortable stay at Lush Tropical Apartment, located at Franklyn D Resort & Spa in Runaway Bay.</p></div>
+  </header>
+
+  <section class="quick">
+    <div class="quick-card"><small>Rental</small><strong>House • 1 Bedroom</strong></div>
+    <div class="quick-card"><small>Sleeps</small><strong>Up to 3 Guests</strong></div>
+    <div class="quick-card"><small>Beds</small><strong>King Bed + Sofa Bed</strong></div>
+    <div class="quick-card"><small>Location</small><strong>Runaway Bay, St. Ann</strong></div>
+  </section>
+
+  <main class="wrap">
+    <section class="section" id="about">
+      <div class="section-inner split">
+        <div><h2>About This Rental</h2><div class="gold-line"></div><p class="lead">Lush Tropical Apartment is a one-bedroom rental designed for comfort, convenience and island relaxation.</p><div class="grid grid-2" style="margin-top:24px"><div class="info-card"><div class="icon">🛏️</div><h3>Bedroom 1</h3><p>Large king bed</p></div><div class="info-card"><div class="icon">🛋️</div><h3>Living Room</h3><p>1 sofa bed</p></div><div class="info-card"><div class="icon">🚿</div><h3>Bathroom</h3><p>1 bathroom</p></div><div class="info-card"><div class="icon">🌿</div><h3>Spaces</h3><p>Kitchen, lawn/garden and porch/veranda</p></div></div></div>
+        <img class="photo" src="assets/beds-living.jpg" alt="Bedroom and living space">
+      </div>
+    </section>
+
+    <section class="section"><div class="section-inner split reverse"><img class="photo" src="assets/resort-aerial.jpg" alt="Aerial view of resort"><div><h2>Property Location</h2><div class="gold-line"></div><p class="lead">Main Street, Runaway Bay, Saint Ann, Jamaica.</p><div class="callout"><strong>Address reference:</strong><br>PSP411 – Franklyn D Resort & Spa</div><div class="button-row"><button class="btn outline" onclick="openModal('mapModal')">View Property Map</button></div></div></div></section>
+
+    <section class="section"><div class="section-inner split"><div><h2>Check-In & Wristband</h2><div class="gold-line"></div><p class="lead">Guests will be provided with a wristband once checking in at the front desk.</p><p class="muted">Please keep your wristband available during your stay as it identifies you as a registered guest.</p></div><img class="photo" src="assets/wristband.jpg" alt="Guest wristband"></div></section>
+
+    <section class="section"><div class="section-inner"><h2>Optional Charges</h2><div class="gold-line"></div><div class="grid grid-2"><div class="info-card"><div class="price"><span>All-inclusive meal plan<br><small>Breakfast, lunch, dinner and beverages; request at front desk</small></span><span class="amount">USD $150 pp/day</span></div><div class="price"><span>Day pass<br><small>Breakfast and lunch, 9:00 AM – 4:00 PM</small></span><span class="amount">USD $100 pp/day</span></div><div class="callout"><strong>Children under 14</strong> pay half-price for the meal plan and day pass.</div></div><div class="info-card"><div class="price"><span>Housekeeping</span><span class="amount">USD $49/request</span></div><div class="price"><span>Laundry</span><span class="amount">USD $20/load</span></div><div class="price"><span>Nanny service<br><small>8:30 AM – 4:30 PM, paid at front desk</small></span><span class="amount">USD $50/day</span></div><div class="price"><span>Extended nanny care<br><small>After 4:30 PM, paid directly to nanny; up to 10 PM</small></span><span class="amount">USD $12/hr</span></div></div></div></div></section>
+
+    <section class="section dark"><div class="section-inner"><h2>General House Rules</h2><div class="gold-line"></div><div class="grid grid-3"><div class="info-card"><h3>No Smoking Indoors</h3><p>Smoking is not allowed in the rooms.</p></div><div class="info-card"><h3>No Loud Noise</h3><p>No loud music, excessive noise or parties in the apartment.</p></div><div class="info-card"><h3>No Illegal Substances</h3><p>Illegal substances are not allowed on the premises.</p></div><div class="info-card"><h3>Registered Guests Only</h3><p>No unregistered guests are allowed.</p></div><div class="info-card"><h3>No Events</h3><p>No parties or events in the apartment. Birthdays and weddings may be arranged separately with the Sales Department.</p></div><div class="info-card"><h3>No Pets</h3><p>Pets are not allowed.</p></div></div></div></section>
+
+    <section class="section"><div class="section-inner split"><div><h2>Smoking Policy</h2><div class="gold-line"></div><p class="lead">Smoking is not allowed inside the apartment.</p><div class="callout warning">Designated smoking areas are located at the end of the pier.</div></div><img class="photo" src="assets/no-smoking-pier.jpg" alt="No smoking policy and pier area"></div></section>
+
+    <section class="section"><div class="section-inner split reverse"><img class="photo" src="assets/energy.jpg" alt="Energy saving reminder"><div><h2>Other Considerations</h2><div class="gold-line"></div><ul class="list"><li>Please do not leave the AC running with doors open.</li><li>Please turn off AC when leaving the apartment or checking out.</li><li>Please turn off lights, TV and ceiling fan when checking out.</li></ul></div></div></section>
+
+    <section class="section"><div class="section-inner split"><div><h2>Room Cleaning</h2><div class="gold-line"></div><p>Daily room cleaning is not included as part of the short-term rental contract.</p><p class="muted">The resort and the apartment are separate entities. Housekeeping, additional linens and towels will not be provided by the resort.</p><div class="callout">Housekeeping may be requested at <strong>USD $49 per request</strong>. Contact your host and the request will be relayed to the housekeeper.</div></div><img class="photo" src="assets/housekeeping.jpg" alt="Housekeeping"></div></section>
+
+    <section class="section"><div class="section-inner"><h2>Garbage Disposal</h2><div class="gold-line"></div><p class="lead">Garbage can be disposed of at the designated location outside the apartment.</p><ul class="list"><li>Go outside at the front of the apartment.</li><li>Then go to the left of the check-in area, under a mango tree.</li></ul><div class="button-row"><button class="btn" onclick="openModal('garbageModal')">View Garbage Bin Location</button></div></div></section>
+
+    <section class="section"><div class="section-inner"><h2>Restaurant & Bar on FDR Resort</h2><div class="gold-line"></div><p class="lead">The apartment and FDR Resort are separate entities.</p><div class="callout warning">Eating at the restaurant or drinking at the bar is only allowed if an All-Inclusive or Day Pass package is purchased at the front desk.</div><p>Please go to the front desk if you need assistance or more information on these packages.</p></div></section>
+
+    <section class="section"><div class="section-inner"><h2>Food & Dining</h2><div class="gold-line"></div><p class="lead">A kitchen is available if you would like to cook. If you prefer not to cook, these are your main options:</p><div class="grid grid-3" style="margin-top:24px"><div class="info-card"><h3>All-Inclusive Pass</h3><p>Includes breakfast, lunch, dinner and drinks at the bar. See optional charges above.</p></div><div class="info-card"><h3>FDR A La Carte Restaurant</h3><p>Available through the resort. View the menu below.</p><button class="btn gold" onclick="openModal('fdrMenuModal')">View FDR Menu</button></div><div class="info-card"><h3>Food Delivery</h3><p>Cuisines2Go delivery information is available below.</p><button class="btn gold" onclick="openModal('cuisinesModal')">View Delivery Menu</button></div></div></div></section>
+
+    <section class="section dark"><div class="section-inner"><h2>Transportation</h2><div class="gold-line"></div><p class="lead">Transportation can be arranged for local trips and attractions such as Dunn's River Falls, Ocho Rios, Negril, Rose Hall Great House, Montego Bay highlights, Bob Marley Museum and Y.S. Falls.</p><div class="image-strip" style="margin-top:24px"><img src="assets/richardo-tours.jpg" alt="Richardo Tours"><img src="assets/leslie-tours.jpg" alt="Leslie's Tours"></div></div></section>
+
+    <section class="section"><div class="section-inner split"><div><h2>Appliance Help</h2><div class="gold-line"></div><p>If the stove has no light indications once turned on, the pilot switch may be off.</p><ul class="list"><li><strong>Up</strong> = OFF</li><li><strong>Down</strong> = ON</li></ul></div><img class="photo" src="assets/stove-switch.jpg" alt="Stove pilot switch"></div></section>
+
+    <section class="section"><div class="section-inner"><h2>Emergency Information</h2><div class="gold-line"></div><p class="lead">For urgent help, use the emergency numbers provided in the poster below.</p><div class="button-row"><button class="btn" onclick="openModal('emergencyModal')">View Emergency Numbers</button></div></div></section>
+
+    <section class="section"><div class="section-inner" style="text-align:center"><h2>Thank You</h2><div class="gold-line" style="margin-left:auto;margin-right:auto"></div><p class="lead">We are so happy you chose Lush Tropical Apartment. Enjoy your stay.</p></div></section>
+  </main>
+
+  <footer class="footer"><strong>Lush Tropical Apartment</strong><p>Private guest information page • Do not share publicly</p></footer>
+
+  <div id="garbageModal" class="modal" onclick="closeOnBg(event,'garbageModal')"><div class="modal-card"><button class="close" onclick="closeModal('garbageModal')">Close ×</button><div class="image-strip"><img src="assets/garbage-location-1.jpg" alt="Garbage location 1"><img src="assets/garbage-location-2.jpg" alt="Garbage location 2"></div></div></div>
+  <div id="fdrMenuModal" class="modal" onclick="closeOnBg(event,'fdrMenuModal')"><div class="modal-card"><button class="close" onclick="closeModal('fdrMenuModal')">Close ×</button><img src="assets/fdr-menu.jpg" alt="FDR menu"></div></div>
+  <div id="cuisinesModal" class="modal" onclick="closeOnBg(event,'cuisinesModal')"><div class="modal-card"><button class="close" onclick="closeModal('cuisinesModal')">Close ×</button><img src="assets/cuisines2go-info.jpg" alt="Cuisines2Go info" style="margin-bottom:18px"><img src="assets/cuisines2go-menu.jpg" alt="Cuisines2Go menu"></div></div>
+  <div id="mapModal" class="modal" onclick="closeOnBg(event,'mapModal')"><div class="modal-card"><button class="close" onclick="closeModal('mapModal')">Close ×</button><img src="assets/property-map.jpg" alt="Property map"></div></div>
+  <div id="emergencyModal" class="modal" onclick="closeOnBg(event,'emergencyModal')"><div class="modal-card"><button class="close" onclick="closeModal('emergencyModal')">Close ×</button><img src="assets/emergency-numbers.jpg" alt="Emergency numbers"></div></div>
+
+  <script>
+    function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
+    function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='auto'}
+    function closeOnBg(e,id){if(e.target.id===id) closeModal(id)}
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.modal.open').forEach(m=>m.classList.remove('open'));document.body.style.overflow='auto'}})
+  </script>
+</body>
+</html>
