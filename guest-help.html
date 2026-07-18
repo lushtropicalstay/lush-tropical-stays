@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Private Guest Help Centre | Lush Tropical Apartment
+</title>
+
+<meta name="robots" content="noindex,nofollow,noarchive">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+--green:#0b3d2e;
+--gold:#c7a45b;
+--cream:#fbf8ef;
+--ink:#1d2622;
+--line:#e7dec9;
+}
+
+
+*{
+box-sizing:border-box;
+}
+
+
+body{
+
+margin:0;
+font-family:Inter,Arial;
+background:var(--cream);
+color:var(--ink);
+line-height:1.6;
+
+}
+
+
+.hero{
+
+background:linear-gradient(135deg,#0b3d2e,#145642);
+color:white;
+padding:60px 20px;
+
+}
+
+
+.container{
+
+max-width:1100px;
+margin:auto;
+
+}
+
+
+h1,h2{
+
+font-family:"Cormorant Garamond";
+
+}
+
+
+h1{
+
+font-size:55px;
+
+}
+
+
+.hero p{
+
+font-size:18px;
+
+}
+
+
+.content{
+
+padding:30px 20px;
+
+}
+
+
+.notice{
+
+background:#fff7df;
+border-left:5px solid var(--gold);
+padding:20px;
+border-radius:15px;
+
+}
+
+
+.search{
+
+margin:25px 0;
+background:white;
+padding:20px;
+border-radius:20px;
+
+}
+
+
+input{
+
+width:100%;
+padding:15px;
+border-radius:12px;
+border:1px solid var(--line);
+font-size:16px;
+
+}
+
+
+.layout{
+
+display:grid;
+grid-template-columns:250px 1fr;
+gap:25px;
+
+}
+
+
+.menu{
+
+background:white;
+padding:15px;
+border-radius:20px;
+height:max-content;
+position:sticky;
+top:20px;
+
+}
+
+
+.menu a{
+
+display:block;
+padding:12px;
+text-decoration:none;
+color:var(--ink);
+font-weight:bold;
+
+}
+
+
+.menu a:hover{
+
+background:#f5eddb;
+color:var(--green);
+
+}
+
+
+section{
+
+background:white;
+border-radius:20px;
+margin-bottom:25px;
+overflow:hidden;
+border:1px solid var(--line);
+
+}
+
+
+section h2{
+
+color:var(--green);
+padding:20px;
+margin:0;
+
+}
+
+
+details{
+
+border-top:1px solid var(--line);
+
+}
+
+
+summary{
+
+padding:18px;
+cursor:pointer;
+font-weight:bold;
+
+}
+
+
+details p{
+
+padding:0 18px 18px;
+
+}
+
+
+footer{
+
+background:#111;
+color:white;
+padding:25px;
+text-align:center;
+
+}
+
+
+@media(max-width:800px){
+
+.layout{
+
+grid-template-columns:1fr;
+
+}
+
+.menu{
+
+position:relative;
+
+}
+
+h1{
+
+font-size:40px;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<header class="hero">
+
+<div class="container">
+
+<div>
+PRIVATE GUEST CONCIERGE
+</div>
+
+
+<h1>
+Guest Help Centre
+</h1>
+
+
+<p>
+Helpful information for guests staying at 
+Lush Tropical Apartment,
+located in a 4-star resort in Runaway Bay, Jamaica.
+</p>
+
+
+</div>
+
+</header>
+
+
+
+<div class="content container">
+
+
+<div class="notice">
+
+<strong>
+Private Guest Page
+</strong>
+
+<br><br>
+
+This page is hidden from search engines and is only accessible through the private link provided to guests.
+
+</div>
+
+
+
+<div class="search">
+
+<input id="search" placeholder="Search questions...">
+
+</div>
+
+
+
+
+<div class="layout">
+
+
+<div class="menu" id="menu">
+
+</div>
+
+
+
+<div id="faq">
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<footer>
+
+Lush Tropical Apartment
+<br>
+Runaway Bay, St. Ann, Jamaica
+
+</footer>
+
+
+
+
+
+<script>
+
+
+fetch("faq.json")
+
+.then(response=>response.json())
+
+.then(data=>{
+
+
+let menu=document.getElementById("menu");
+
+let faq=document.getElementById("faq");
+
+
+
+data.categories.forEach(category=>{
+
+
+menu.innerHTML +=
+
+`
+<a href="#${category.id}">
+${category.icon}
+${category.name}
+</a>
+`;
+
+
+
+let section=document.createElement("section");
+
+section.id=category.id;
+
+
+section.innerHTML=
+
+`
+<h2>
+${category.icon} ${category.name}
+</h2>
+`;
+
+
+
+category.questions.forEach(item=>{
+
+
+section.innerHTML +=
+
+`
+
+<details>
+
+<summary>
+${item.question}
+</summary>
+
+
+<p>
+${item.answer.replace(/\n/g,"<br>")}
+</p>
+
+
+</details>
+
+`;
+
+});
+
+
+faq.appendChild(section);
+
+
+});
+
+
+
+
+
+let search=document.getElementById("search");
+
+
+search.addEventListener("keyup",function(){
+
+
+let text=this.value.toLowerCase();
+
+
+document.querySelectorAll("details").forEach(item=>{
+
+
+if(item.innerText.toLowerCase().includes(text)){
+
+item.style.display="block";
+
+}
+
+else{
+
+item.style.display="none";
+
+}
+
+
+});
+
+
+});
+
+
+
+});
+
+
+</script>
+
+
+
+</body>
+
+</html>
