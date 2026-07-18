@@ -1,0 +1,381 @@
+{
+  "categories": [
+
+    {
+      "id": "apartment",
+      "icon": "🏠",
+      "name": "Apartment",
+      "questions": [
+
+        {
+          "question": "Is Wi-Fi available inside the apartment?",
+          "answer": "Yes. Complimentary Wi-Fi is available inside the apartment. The apartment shares the resort Wi-Fi network and the Wi-Fi password will be provided on the day of check-in."
+        },
+
+        {
+          "question": "Does the apartment have air conditioning?",
+          "answer": "Yes. Air conditioning is available in both the bedroom and the living room."
+        },
+
+        {
+          "question": "Do I need to climb stairs to get to the apartment?",
+          "answer": "No. The apartment is located on the ground floor, making it convenient for elderly guests, families with young children, and guests with luggage."
+        },
+
+        {
+          "question": "Is there a balcony or terrace?",
+          "answer": "Yes. The apartment has terrace/balcony areas at both the front and rear of the apartment, providing comfortable outdoor spaces."
+        },
+
+        {
+          "question": "How many beds are in the apartment?",
+          "answer": "The apartment comfortably accommodates up to three guests and includes:\n\n• Bedroom: One king-size bed\n\n• Living Room: One sofa/twin-size bed\n\nThis layout is ideal for couples, small families, or up to three guests."
+        },
+
+        {
+          "question": "Is there a kitchen?",
+          "answer": "Yes. The apartment includes a fully equipped kitchen where guests can prepare their own meals if they wish."
+        },
+
+        {
+          "question": "What household facilities are available in the apartment?",
+          "answer": "The apartment includes the following household facilities:\n\n• Dishwasher: A dishwasher is not available. Most apartments and vacation rentals in Jamaica do not typically include dishwashers.\n\n• Iron and ironing board: Yes. An iron and ironing board are provided.\n\n• Towels: Bath towels and washcloths/rags are provided for guests.\n\n• Cooker/Stove: Yes. A cooker/stove is available for meal preparation.\n\n• Microwave: Yes. A microwave is available in the kitchen.\n\n• Fridge/Freezer: Yes. The apartment has a refrigerator with freezer compartment.\n\n• Air Conditioning: Yes. Air conditioning is available in both the bedroom and living room."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "checkin",
+      "icon": "🔑",
+      "name": "Check-In & Arrival",
+      "questions": [
+
+        {
+          "question": "What time is check-in and check-out?",
+          "answer": "Check-in: 3:00 PM\n\nCheck-out: 12:00 PM (Noon)"
+        },
+
+        {
+          "question": "How do I collect the keys?",
+          "answer": "Please check in at the Front Desk of Franklyn D Resort & Spa. After check-in you will receive your apartment keys, resort wristband, and any relevant resort information."
+        },
+
+        {
+          "question": "Where is the apartment located?",
+          "answer": "Lush Tropical Apartment\n\nMain Street, Runaway Bay\nSt. Ann, Jamaica\n\nPSP411 – Franklyn D Resort & Spa"
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "resort",
+      "icon": "🏖",
+      "name": "Resort & Amenities",
+      "questions": [
+
+        {
+          "question": "Will we have access to the resort?",
+          "answer": "Yes. Guests have access to the main beach, eastern beach access, swimming pool, tennis court, basketball court, gardens, and walking areas. Some services require additional payment through the Front Desk."
+        },
+
+        {
+          "question": "Is there beach access?",
+          "answer": "Yes. Guests have access to the main beach on the property. There is also an eastern gate which provides access to a longer stretch of beach."
+        },
+
+        {
+          "question": "Is there a swimming pool?",
+          "answer": "Yes. Guests have access to the resort swimming pool."
+        },
+
+        {
+          "question": "Will I receive a resort wristband?",
+          "answer": "Yes. Guests will receive a wristband during check-in at the resort Front Desk."
+        }
+
+      ]
+    }
+
+  ]
+},    {
+      "id": "food",
+      "icon": "🍽",
+      "name": "Food & Dining",
+      "questions": [
+
+        {
+          "question": "Are there restaurants on the property?",
+          "answer": "Yes. The resort has a restaurant which is managed by Franklyn D Resort & Spa. The apartment and the resort are separate entities.\n\nRestaurant access is available through purchasing an All-Inclusive Package or dining options available through the resort."
+        },
+
+        {
+          "question": "Can I purchase an All-Inclusive meal plan?",
+          "answer": "Yes. Guests can purchase an All-Inclusive Package directly from the Front Desk.\n\nThe cost is USD $150 per person per day and includes breakfast, lunch, dinner, and beverages.\n\nChildren under 14 years pay half price."
+        },
+
+        {
+          "question": "Is there a day pass option?",
+          "answer": "Yes. A day pass is available through the resort Front Desk.\n\nThe cost is USD $100 per person and includes breakfast and lunch from 9:00 AM - 4:00 PM.\n\nChildren under 14 years pay half price."
+        },
+
+        {
+          "question": "Can I cook meals in the apartment?",
+          "answer": "Yes. The apartment has a fully equipped kitchen for guests who prefer to prepare their own meals."
+        },
+
+        {
+          "question": "Are there food delivery options?",
+          "answer": "Several local restaurants and food services operate in the Runaway Bay area. Please contact the host for current recommendations."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "family",
+      "icon": "👨‍👩‍👧",
+      "name": "Families & Elderly Guests",
+      "questions": [
+
+        {
+          "question": "Is the apartment suitable for elderly guests?",
+          "answer": "Yes. The apartment is located on the ground floor, so there are no stairs required for access. This makes it convenient for elderly guests and guests with mobility concerns."
+        },
+
+        {
+          "question": "Is the apartment family friendly?",
+          "answer": "Yes. The apartment welcomes families and can comfortably accommodate up to three guests."
+        },
+
+        {
+          "question": "Are nanny services available?",
+          "answer": "Yes. Nanny services are available through the resort.\n\nThe cost is USD $50 daily between 8:30 AM and 4:30 PM. Payment is made at the Front Desk.\n\nIf nanny service is required beyond 4:30 PM, the cost is USD $12 per hour payable directly to the nanny (up to 10:00 PM)."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "transport",
+      "icon": "🚕",
+      "name": "Transportation & Parking",
+      "questions": [
+
+        {
+          "question": "How do I arrange airport transportation?",
+          "answer": "If arriving from Sangster International Airport (Montego Bay), we recommend Jamaica Tours Limited for reliable airport transportation.\n\nYou can book directly through their website:\nhttps://jamaicatoursltd.com\n\nWhen booking, select Franklyn D Resort & Spa from the destination options."
+        },
+
+        {
+          "question": "Is parking available?",
+          "answer": "Yes. Free and secure parking is available at the resort for guests staying at the apartment."
+        },
+
+        {
+          "question": "Can you recommend local taxi drivers?",
+          "answer": "Yes. We can recommend trusted local taxi drivers. Please contact the host before or during your stay for assistance."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "location",
+      "icon": "📍",
+      "name": "Location",
+      "questions": [
+
+        {
+          "question": "Where is Lush Tropical Apartment located?",
+          "answer": "Lush Tropical Apartment is located at:\n\nMain Street\nRunaway Bay\nSt. Ann, Jamaica\n\nPSP411 - Franklyn D Resort & Spa"
+        },
+
+        {
+          "question": "What attractions are nearby?",
+          "answer": "The apartment is centrally located in Runaway Bay, St. Ann, Jamaica's Garden Parish. Nearby attractions include beaches, restaurants, Dunn's River Falls, Green Grotto Caves, Ocho Rios, and other popular attractions."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "essentials",
+      "icon": "🛒",
+      "name": "Shopping & Essentials",
+      "questions": [
+
+        {
+          "question": "Where is the nearest supermarket?",
+          "answer": "Emporium Supermarket is approximately a 7-minute walk from the apartment."
+        },
+
+        {
+          "question": "Is US dollars or Jamaican dollars accepted?",
+          "answer": "Both US Dollars (USD) and Jamaican Dollars (JMD) are commonly accepted in Jamaica. Many businesses also accept credit and debit cards."
+        },
+
+        {
+          "question": "Where is the nearest ATM?",
+          "answer": "There are ATMs available in Runaway Bay, only a few minutes from the resort. The Front Desk can assist with directions."
+        },
+
+        {
+          "question": "Where is the nearest pharmacy?",
+          "answer": "Several pharmacies are located within Runaway Bay and are only a few minutes from the resort."
+        },
+
+        {
+          "question": "Where is the nearest hospital or clinic?",
+          "answer": "For medical needs, the nearest major hospital is St. Ann's Bay Regional Hospital, approximately 20-25 minutes away by car."
+        }
+
+      ]
+    },    {
+      "id": "services",
+      "icon": "🧹",
+      "name": "Housekeeping & Laundry",
+      "questions": [
+
+        {
+          "question": "How do I request housekeeping?",
+          "answer": "Daily housekeeping is not included as part of the short-term rental.\n\nThe apartment and the resort are separate entities. Additional housekeeping, linens, and towels are not provided by the resort.\n\nIf you require housekeeping during your stay, please contact the host and arrangements can be made with our housekeeper.\n\nCost: USD $59 per request."
+        },
+
+        {
+          "question": "How do I arrange laundry?",
+          "answer": "Laundry services are available nearby through T&S Elite Laundry & Cleaning Services.\n\nServices include:\n• Wash\n• Dry\n• Iron\n• Dry Cleaning\n• Pick-up and drop-off service\n\nTelephone: (876) 574-9631\n\nAddress:\nShop #12 Mom's Village Plaza\nRunaway Bay, St. Ann"
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "visitors",
+      "icon": "👥",
+      "name": "Visitors",
+      "questions": [
+
+        {
+          "question": "Can visitors use the resort facilities?",
+          "answer": "Visitor access is subject to resort rules and policies. Please contact the Front Desk before bringing visitors to confirm any requirements or additional charges."
+        },
+
+        {
+          "question": "Can unregistered guests stay in the apartment?",
+          "answer": "No. Only registered guests included on the reservation are permitted to stay in the apartment."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "activities",
+      "icon": "🤿",
+      "name": "Activities",
+      "questions": [
+
+        {
+          "question": "Is scuba diving available nearby?",
+          "answer": "Yes. Scuba diving services are available on the property through Scuba Jamaica.\n\nPlease ask the Front Desk about current prices and availability.\n\nMore information:\nhttps://www.scuba-jamaica.com"
+        },
+
+        {
+          "question": "What activities are available at the resort?",
+          "answer": "Guests can enjoy a variety of resort activities including beaches, swimming pool, tennis court, basketball court, gardens, hammocks, and other recreational facilities."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "rules",
+      "icon": "🚭",
+      "name": "House Rules",
+      "questions": [
+
+        {
+          "question": "Is smoking allowed in the apartment?",
+          "answer": "No. Smoking is NOT allowed inside the apartment.\n\nDesignated smoking areas are available at the end of the pier."
+        },
+
+        {
+          "question": "Are parties or events allowed?",
+          "answer": "No. Parties, events, loud music, and excessive noise are not permitted in the apartment."
+        },
+
+        {
+          "question": "Are illegal substances allowed?",
+          "answer": "No. Illegal substances are strictly prohibited on the property."
+        },
+
+        {
+          "question": "Are pets allowed?",
+          "answer": "No. Pets are not permitted in the apartment."
+        },
+
+        {
+          "question": "Are there any energy-saving guidelines?",
+          "answer": "Please help us conserve energy by:\n\n• Not leaving the air conditioning running while doors are open.\n\n• Turning off the air conditioning when leaving the apartment or checking out.\n\n• Turning off lights, television, and ceiling fans when checking out."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "garbage",
+      "icon": "🗑",
+      "name": "Garbage Disposal",
+      "questions": [
+
+        {
+          "question": "Where do I dispose of garbage?",
+          "answer": "Garbage can be disposed of at the designated garbage area.\n\nDirections:\n\nGo outside at the front of the apartment.\n\nThen walk to the left of the check-in area under the mango tree where the garbage bins are located."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "utilities",
+      "icon": "⚡",
+      "name": "Utilities & Emergencies",
+      "questions": [
+
+        {
+          "question": "What should I do if there is a power outage or water interruption?",
+          "answer": "Temporary power outages or water interruptions can occasionally occur in Jamaica.\n\nPlease wait a few minutes to see if service returns. If the issue continues, contact the host or the resort Front Desk for assistance."
+        }
+
+      ]
+    },
+
+
+    {
+      "id": "contact",
+      "icon": "📞",
+      "name": "Contact",
+      "questions": [
+
+        {
+          "question": "What if I have more questions before or during my stay?",
+          "answer": "Please contact us through your booking platform or the contact information provided with your reservation. We are happy to assist and help make your stay comfortable and stress-free."
+        }
+
+      ]
+    }
+
+  ]
+}
